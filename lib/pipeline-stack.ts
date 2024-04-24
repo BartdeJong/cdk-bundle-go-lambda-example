@@ -16,7 +16,7 @@ export class PipelineStack extends cdk.Stack {
 
     this.pipeline = new pipelines.CodePipeline(this, 'Pipeline', {
       synth: new pipelines.ShellStep('synth', {
-        input: pipelines.CodePipelineSource.connection('REPLACE_WITH_OWNER/cdk-bundle-go-lambda-example', 'main', {
+        input: pipelines.CodePipelineSource.connection('owner/cdk-bundle-go-lambda-example', 'main', {
           connectionArn: 'REPLACE_WITH_CONNECTION_ARN',
         }),
         commands: [

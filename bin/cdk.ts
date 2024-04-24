@@ -10,16 +10,16 @@ const app = new cdk.App();
 const delivery = new PipelineStack(app, 'Api-DeliveryPipeline', {
   name: 'Api',
   env: {
-    account: '12345678910',
-    region: 'us-east-1'
+    account: '309632359432',
+    region: 'eu-central-1'
   }
 });
 
 delivery.pipeline.addStage(
   new AppStage(app, 'App', {
     env: {
-      account: '01987654321',
-      region: 'us-east-1',
+      account: '309632359432',
+    region: 'eu-central-1'
     },
   })
 );
